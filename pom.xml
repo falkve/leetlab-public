@@ -13,6 +13,15 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source> <!-- REQUIRED -->
+        <maven.compiler.target>${java.version}</maven.compiler.target> <!-- REQUIRED -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <appengine.maven.plugin>1.9.52</appengine.maven.plugin>
+    </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,9 +42,6 @@
         <!-- end::tests[] -->
     </dependencies>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <build>
         <plugins>
@@ -53,6 +59,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>${appengine.maven.plugin}</version>
             </plugin>
         </plugins>
     </build>
