@@ -18,7 +18,6 @@
         <maven.compiler.source>${java.version}</maven.compiler.source> <!-- REQUIRED -->
         <maven.compiler.target>${java.version}</maven.compiler.target> <!-- REQUIRED -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <appengine.maven.plugin>1.9.52</appengine.maven.plugin>
     </properties>
 
 
@@ -43,6 +42,7 @@
     </dependencies>
 
 
+
     <build>
         <plugins>
             <plugin>
@@ -63,7 +63,7 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${appengine.maven.plugin}</version>
+                <version>LATEST</version>
             </plugin>
         </plugins>
     </build>
